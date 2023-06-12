@@ -10,6 +10,62 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">  
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+      .box {
+        height: 200px;
+        overflow: scroll;
+        scroll:hidden;
+      }
+  
+      .card-content {
+        height: 70px;
+      }
+  
+      .read-more {
+        display: none;
+      }
+    </style>
+
+    <script>
+      function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more"; 
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less"; 
+          moreText.style.display = "inline";
+        }
+      }
+      </script>
+
+    <script>
+      var readMoreLinks = document.getElementsByClassName('read-more');
+      for (var i = 0; i < readMoreLinks.length; i++) {
+        readMoreLinks[i].addEventListener('click', toggleReadMore);
+      }
+  
+      function toggleReadMore(event) {
+        event.preventDefault();
+        var cardContent = this.parentNode.getElementsByClassName('card-content')[0];
+        if (cardContent.classList.contains('expanded')) {
+          cardContent.style.height = '70px';
+          cardContent.classList.remove('expanded');
+          this.textContent = 'Read More';
+        } else {
+          cardContent.style.height = 'auto';
+          cardContent.classList.add('expanded');
+          this.textContent = 'Read Less';
+        }
+      }
+    </script>
 
 </head>
 <body>
@@ -49,8 +105,13 @@
             <div class="container-fluid">
                 <section class="row">
                     <div class="fill-screen fixed-attachment" style="background-image: url(./images/laptop-1.jpg)">
+
                         <img class="title img-circle img-responsive" src="./images/rishi.jpg"/>
-                        <div class="title first-name">Rishikesh<span class="last-name">Singh</span></div>
+
+                        <div class="title first-name">Rishikesh<span class="last-name">Singh</span>
+                        </div>
+                        <div class ='post'> Engineer @Chetu | Android | Flutter(Android + iOS + web) | Java | Kotlin | Dart | Firebase | Compose | DSA
+                        </div>
 
                         <div class="down-button down-icon" onclick="$('#about').animatescroll({scrollSpeed: 3000, padding:50});">
 
@@ -69,7 +130,7 @@
                         </article>
           
                         <article class="col-md-6">
-                            <P>My name is Rishikesh singh,i am from Haidergarh Barabanki dist, After completing my 
+                            <P>My name is Rishikesh singh,I am from Haidergarh Barabanki dist, After completing my 
                               diploma in computer application from Government Polytechnic Unnao in year 2018 having gotton two offers to take free internship a well reputed organizations [Softpro India Lucknow, BTPS Kanpur].
 
                               <p>I believe if anything can change the world in postive sense that is Education.</p>
@@ -87,7 +148,7 @@
                       <div>
                             <div class="social">
                                     <a href="#" title="https://www.linkedin.com/feed/"> <i class="fa fa-linkedin"></i> </a>
-                                    <a href="#" title="https://github.com/RishiTanu"> <i class="fa fa-github"></i> </a>
+                                    <a href="https://github.com/RishiTanu" title="https://github.com/RishiTanu"> <i class="fa fa-github"></i> </a>
                                     <a href="#" title="https://www.blogger.com/blogger.g?blogID=8064209993229175792#allposts"> <i class="fa fa-user-o">
 
                             </i></a>
@@ -184,65 +245,67 @@
                     </article>    
           
                     <article class="row" id="skills-progress">
+                        <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            <span>JDBC</span>
+                            <span class="pull-right skill-level">Intermediate</span>
+                          </div>
+                        </div>
+
+                        <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            <span>Kotlin</span>
+                            <span class="pull-right skill-level">Intermediate</span>
+                          </div>
+                        </div>
+
+                        <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            <span>Dart</span>
+                            <span class="pull-right skill-level">Intermediate</span>
+                          </div>
+                        </div>
 
                       <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                            <span>HTML/CSS</span>
-                            <span class="pull-right skill-level">Beginer</span>
+                          <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            <span>Firebase</span>
+                            <span class="pull-right skill-level">Intermediate</span>
                           </div>
-                      </div>
-          
-                      <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                            <span>Javascript</span>
-                            <span class="pull-right skill-level">Beginner</span>
+                        </div>
+                        <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            <span>Compose</span>
+                            <span class="pull-right skill-level">Intermediate</span>
                           </div>
-                      </div>
-          
-                      <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                            <span>Bootstrap</span>
-                            <span class="pull-right skill-level">Beginner</span>
-                          </div>
-                      </div>
-          
-                       <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                            <span>PHP/Laravel</span>
-                            <span class="pull-right skill-level">Beginner</span>
-                          </div>
-                      </div>
-          
-                      <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                            <span>JDBC</span>
-                            <span class="pull-right skill-level">Beginner</span>
-                          </div>
-                      </div>
-          
-                      <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                        <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                             <span>C/C++</span>
                             <span class="pull-right skill-level">Intermediate</span>
                           </div>
-                      </div>
-          
-                      <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                      
+                        <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                             <span>Java</span>
                             <span class="pull-right skill-level">Intermediate</span>
                           </div>
-                      </div>
-          
-                      <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                        <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                             <span>Android</span>
-                            <span class="pull-right skill-level">Intermediate</span>
+                            <span class="pull-right skill-level">Expert</span>
                           </div>
+                        </div>
+                        <div class="progress col-xs-8 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 ">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            <span>Flutter</span>
+                            <span class="pull-right skill-level">Expert</span>
+                          </div>
+                        </div>
                       </div>
-          
-
-                    </article>  
+                    </div>
+                      
                     <hr>
                     <article class="row skill-cards">
                       
@@ -293,77 +356,81 @@
                       <h3><i class="fa fa-code"></i><span> My works</span> </h3>
                       <hr>
                   </article>
-                    
-                  <article class="row">
+
+
                   
-                  <div class="col-xs-8 col-md-offset-2 col-md-4 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 box box-slim">
-                        <h4>letsDrive</h4>
-                        <P class="small-text">Letsdrive application for booking bikes and car in very simplest way.
-                           </P>
-                        <a href="https://play.google.com/store/apps/details?id=com.letsdrive.bikenew">
-                          <p class="small-text">https://play.google.com/store/apps/details?id=com.letsdrive.bikenew
-                            <p></a>
-                              <p class="small-text">Technology Used:- Android,java,JavaScript</p>
+<div class="testing">
+ 
+    <div class="box ">
+      <h4>LetsDrive</h4>
+      <p class="small-text card-content">Letsdrive application for booking bikes and car in a very simple way.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.letsdrive.bikenew" class="small-text">https://play.google.com/store/apps/details?id=com.letsdrive.bikenew</a>
+      <p class="small-text">Technology Used: Android, Java, JavaScript</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  
+ 
+    <div class="box ">
+      <h4>Electronic Photobook</h4>
+      <p class="small-text card-content">Electronic Photobook for sharing and viewing wedding albums by different users like distributors, studio persons, and customers.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.elation.efb.surat" class="small-text">https://play.google.com/store/apps/details?id=com.elation.efb.surat</a>
+      <p class="small-text">Technology Used: Android, Java</p>
+      <a href="#" class="read-more">Read More</a>
+
+  </div>
+
+    <div class="box ">
+      <h3>Image Sharing</h3>
+      <p class="small-text card-content">Image sharing application for customers to select and update function photographs for studio.</p>
+      <p class="small-text">Technology Used: Android, Java</p>
+      <a href="#" class="read-more">Read More</a>
+   
+  </div>
+  
+</div>
+
+
+                    
+                  </div>
+                
+                  <div class="testing">
+                    <div class="">
+                      <div class="box ">
+                        <h4>Meri PhotoBook</h4>
+                        <p class="small-text card-content">MeriPhoto book for customers to view albums shared by the studio.</p>
+                        <a href="https://play.google.com/store/apps/details?id=soft.elation.dev.mpb" class="small-text">https://play.google.com/store/apps/details?id=soft.elation.dev.mpb</a>
+                        <p class="small-text">Technology Used: Android, Java</p>
+                        <a href="#" class="read-more">Read More</a>
                       </div>
-
-                      <div class="col-xs-8 col-md-offset-2 col-md-4 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 box box-slim">
-                          <h4>Electronic Photobook</h4>
-                          <span class="small-text">Electronic Photobook for sharing and see wedding albums, for different persons like Distributors, Studio person and customers</span>
-                          <a href="https://play.google.com/store/apps/details?id=com.elation.efb.surat">
-                           <span class="small-text"> https://play.google.com/store/apps/details?id=com.elation.efb.surat</span></a><br>
-                                <span class="small-text">Technology Used:- Android,java</span>
-                        </div>
-
-                        <div class="col-xs-8 col-md-offset-2 col-md-4 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 box box-slim">
-                            <h3>Image Sharing</h3>
-                            <P class="small-text">Image sharing application for cusomers to select yours function
-                              photographs and update to studio</P>
-                                     <span class="small-text">Technology Used:- Android,java</span>  
-                        </div>
-                       
-                        </article>
-                        <article class="row">
-
-                        <div class="col-xs-8 col-md-offset-2 col-md-4 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 box box-slim">
-                            <h4>Meri PhotoBook</h4>
-                            <span class="small-text">MeriPhoto book for customers to watch yours albums shared by studio</span>
-                            <a href="https://play.google.com/store/apps/details?id=soft.elation.dev.mpb">
-                              <span class="small-text"> https://play.google.com/store/apps/details?id=soft.elation.dev.mpb</span></a><br>
-                                   <span class="small-text">Technology Used:- Android,java</span>
-                        </div>
-
-
-                        <div class="col-xs-8 col-md-offset-2 col-md-4 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 box box-slim">
-                            <h4>Catalogue Vendor && Catalogue Customer</h4>
-                            <p class="small-text">Catalogue vendor application where a vendor can share catalogue to one or multiple customers in one time  to add its price.
-                            </p>
-                            <p class="small-text">Catalogue customer application where a customer watched catalogue
-                                that share by cataloge vendor app and here customer can booked catalogue to share
-                                to venor </p>
-                        </div>
-
-                        <div class="col-xs-10 col-md-offset-2 col-md-2 col-md-offset-2 col-lg-offset-4 col-lg-4 col-lg-offset-4 box box-slim">
-                            <h6><b>Github Projects</b></h6>
-                            <span class="small-text">SQLite</span>
-                            <a class="small-text" href="https://github.com/RishiTanu/SQLite-Project">
-                               <span>https://github.com/RishiTanu/SQLite-Project</a></span>
-                           <br/>
-                            <span class="small-text"> Android Interview </span>
-                               <span><a class="small-text" href="https://github.com/RishiTanu/SQLite-Project">
-                                   https://github.com/RishiTanu/Android-Interview</a> </span>
-                            <br/>
-                            
-                            <span class="small-text"> WebServices</span>
-                             <a class="small-text" href="https://github.com/RishiTanu/WebServices">https://github.com/RishiTanu/WebServices</a>
-                             <p class="small-text">Working with Volley,Asyntask,Android Networking,Retrofit,Universal Image Loader,Glide and Piccaso</p>
-                           
-                            <span class="small-text">Notes</span>
-                            <a class="small-text" href="https://github.com/RishiTanu/Note">https://github.com/RishiTanu/Note</a> 
-                               <p class="small-text">Working with room database liabrary</p>
-                            
-                        </div>
-                   
-                  </article>
+                    </div>
+                    <div class="">
+                      <div class="box ">
+                        <h4>Catalogue Vendor & Catalogue Customer</h4>
+                        <p class="small-text card-content">Catalogue vendor application where vendors can share catalogues with one or multiple customers and set prices.</p>
+                        <p class="small-text card-content">Catalogue customer application where customers can view and book catalogues shared by vendors.</p>
+                        <a href="#" class="read-more">Read More</a>
+                      </div>
+                    </div>
+                    <div class="">
+                      <div class="box ">
+                        <h6><b>Github Projects</b></h6>
+                        <p class="small-text">SQLite</p>
+                        <a href="https://github.com/RishiTanu/SQLite-Project" class="small-text">https://github.com/RishiTanu/SQLite-Project</a>
+                        <br>
+                        <p class="small-text">Android Interview</p>
+                        <a href="https://github.com/RishiTanu/Android-Interview" class="small-text">https://github.com/RishiTanu/Android-Interview</a>
+                        <br>
+                        <p class="small-text">WebServices</p>
+                        <a href="https://github.com/RishiTanu/WebServices" class="small-text">https://github.com/RishiTanu/WebServices</a>
+                        <p class="small-text">Working with Volley, Asyntask, Android Networking, Retrofit, Universal Image Loader, Glide, and Picasso</p>
+                        <p class="small-text">Notes</p>
+                        <a href="https://github.com/RishiTanu/Note" class="small-text">https://github.com/RishiTanu/Note</a>
+                        <p class="small-text">Working with Room database library</p>
+                        <a href="#" class="read-more">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  
               </section>
 
                 <!--middle work image-->
